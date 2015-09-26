@@ -10,6 +10,14 @@ html, body {
    font-size:13px;
 }
 
+.navbar h2{
+  /*display: inline-block;*/
+  text-align: center;
+  font-family: consolas;
+  font-style: normal;
+  font-size: 2.5em;
+}
+
 a {
   color:#222222;
 }
@@ -73,7 +81,7 @@ hr {
 
 .navbar-red {
     border-width:0;
-	background-color:red;
+	  background-color:rgb(111, 8, 30);
     color:#ffffff;
     font-family:arial,sans-serif;
     top:0;
@@ -89,8 +97,17 @@ hr {
 .navbar-red .dropdown-menu li > a {padding-left:30px;}
 
 .navbar-red li>a:hover, .navbar-red li>a:focus, .navbar-red .open, .navbar-red .open>a, .navbar-red .open>a:hover, .navbar-red .open>a:focus {
-   background-color:#2A4888;
+   background-color:#8D3446;
    color:#fff;
+}
+
+.navbar-nav{
+  /*background-color: blue;*/
+  height: 68px;
+}
+
+.navbar-nav li{
+  padding-top: 9px;
 }
 
 #main {
@@ -98,6 +115,7 @@ hr {
    padding-left:0;
    padding-right:0;
    width: 70%;
+   border-right: 5px solid #76081E;
 }
 #main .img-circle {
    margin-top:18px;
@@ -109,6 +127,9 @@ hr {
     padding:0px;
 	padding-top:15px;
   float: right;
+  width: 404px;
+  background-color: #8D3446 !important;
+  border-left: 5px solid #76081E;
 }
 
 #sidebar, #sidebar a, #sidebar-footer a {
@@ -139,14 +160,20 @@ hr {
   border-radius:2px;
 }
 #sidebar-footer {
-  background-color:#444;
+  /*background-color:#444;*/
   position:absolute;
   bottom:5px;
   padding:5px;
+  font-size: 1.3em;
+
 }
 #footer {
   margin-bottom:20px;
 }
+/*#srch{
+  border: 7px solid darkred;
+  border-radius: 11px;
+}*/
 
 /* bootstrap overrides */
 
@@ -171,14 +198,14 @@ h1,h2,h3 {
     text-shadow:0 0 1px rgba(0,0,0,.3);
 }
 .form-control {
-	
+
 }
 
 .panel textarea, .well textarea, textarea.form-control
 {
    resize: none;
 }
-  
+
 .badge{
    color:#3B5999;
    background-color:#fff;
@@ -187,7 +214,7 @@ h1,h2,h3 {
    background-color:#3B5999;
    color:#fff;
 }
-    
+
 .jumbotron {
   background-color:transparent;
 }
