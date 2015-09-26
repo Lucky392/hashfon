@@ -10,6 +10,9 @@ $('#logIn').click(function () {
 // };
 
 var json_token;
+var emailtoken;
+var username;
+var studenti;
 
 function make_base_auth(user, password) {
     var tok = user + ':' + password;
@@ -18,7 +21,7 @@ function make_base_auth(user, password) {
 }
 
 function logIn() {
-var username = document.getElementById("email").value;
+username = document.getElementById("email").value;
 var password = document.getElementById("password").value;
     $.ajax({
         type: "POST",
@@ -33,26 +36,49 @@ var password = document.getElementById("password").value;
         success: function (response) {
           json_token = response;
           location.href = "pocetna.html";
+          emailtoken = username;
         },
+        async: false,
+
         error: function (response){
           alert("Niste se uspesno ulogovali!");
         }
+
     });
 }
 
+function getData() {
+  $.ajax({
+    url: 'http://192.168.0.104:8080/hashfon/rest/student',
+    dataType: 'json',
+    success: function(response){
+        studenti = response;
+        napuniInfo();
 
 
-
-
-
-
-
-
-
-
-//olovka dugme
-$(document).ready(function() {
-  $('#editStudent').click(function() {
-
+    }
   });
+
+
+}
+
+function napuniInfo() {
+    alert(emailtoken);
+  for (var i = 0; i < studenti.length; i++) {
+    if (studenti[i].email == emailtoken) {
+      trenutniUser = studenti[i].email;
+      alert(trenutniUser.prezime);
+    }
+  }
+}
+
+function koko(){
+  alert(emailtoken);
+
+}
+
+
+$(document).ready(function() {
+  getData();
+
 });

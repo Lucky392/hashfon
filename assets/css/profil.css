@@ -81,3 +81,9 @@ h4{
 #slika_div{
   width: 90.8%;
 }
+
+h1{
+  font-family: consolas;
+  color: #23717A;
+  text-align: center;
+}
