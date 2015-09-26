@@ -45,6 +45,8 @@ body{
 
 }
 
+
+
 h4{
   font-family: consolas;
 }
@@ -52,4 +54,30 @@ h4{
 #profil a{
   float: right;
   font-size: 2em;
+}
+
+#profil{
+  width: 110%;
+}
+
+.ext-left{
+
+    float:left;
+}
+
+.ext-name{
+  /*float: right;*/
+
+}
+.editable li{
+    clear:both;
+
+}
+
+.editable{
+  height: 40px;
+}
+
+#slika_div{
+  width: 90.8%;
 }

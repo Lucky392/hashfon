@@ -50,12 +50,9 @@ var password = document.getElementById("password").value;
 
 
 
-
+//olovka dugme
 $(document).ready(function() {
   $('#editStudent').click(function() {
-    $('.editable').css('border', '1px solid #23717A');
-
-
 
   });
 });
